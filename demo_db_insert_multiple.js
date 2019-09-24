@@ -19,5 +19,7 @@ con.connect(function(err) {
   con.query(sql, [values], function (err, result) {
     if (err) throw err;
     console.log("Number of records inserted: " + result.affectedRows);
+    console.log(result.affectedRows);
+    console.log(result.message);
   });
 });
